@@ -1,22 +1,50 @@
-# # Task
+# EX 39 C program to find sum of digits.
+## DATE: 
+## AIM:
+To write a C program to find sum of digits.
 
-# # Given a positive integer denoting , do the following:
+## Algorithm
+1.Start the program and declare variables to store the number and sum.
 
-# If  41<=n <=49 print the lowercase English word corresponding to the number (e.g., forty one for 41 , forty two for 42 etc.).
-If n>49 print Greater than 49.
-## Input Format
+2.Read an integer input from the user.
 
-The first line contains a single integer, .
+3.Use a loop to extract each digit using modulus and division.
 
-## Constraints
+4.Add each digit to the sum variable.
 
-## Output Format
+5.Print the sum of digits and end the program.
 
-If  41<=n <=49 print the lowercase English word corresponding to the number (e.g., forty one for 4 , forty two for 42 etc.).
-If n>49 print Greater than 49.
-## Sample Input
+## Program:
+```
+/*
+C program to find sum of digits.
+*/
 
-41
-## Sample Output
+#include <stdio.h>
 
-forty one
+int main()
+{
+    int num, sum = 0, digit;
+    scanf("%d", &num);
+
+    while(num != 0)
+    {
+        digit = num % 10;
+        sum += digit;
+        num /= 10;
+    }
+
+    printf("Sum of digits: %d\n", sum);
+
+    return 0;
+}
+
+```
+
+## Output:
+![image](https://github.com/user-attachments/assets/ed3ab544-8c46-4a3a-8e88-fce873fd9b6c)
+
+
+
+## Result:
+Thus the program was executed and the output was verified successfully.
